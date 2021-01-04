@@ -43,10 +43,6 @@ stage('Deploy sql-pv') {
       }
     }
 
-
-/**/
-
-
   }
 }
 
