@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-blue-whale
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: hello-whale-app
+      version: blue
+  template:
+    metadata:
+      name: hello-blue-whale-pod
+      labels:
+        app: hello-whale-app
+        version: blue
+    spec:
+      containers:
+      - name: hello-whale-container
+        image: paulslewis66/nodejs-crud-with-expressjs-mysql:latest
+        imagePullPolicy: ifNotPresent
+        ports:
+        - containerPort: 8000
+        imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: hello-whale-svc
+  labels:
+    app: hello-whale-app
+spec:
+  selector:
+    app: hello-whale-app
+    version: blue
+  type: NodePort
+  ports:
+  - nodePort: 31113
+    port: 8000
