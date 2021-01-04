@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: paulslewis66/nodejs-crud-with-expressjs-mysql:latest
+        image: paulslewis66/nodejs:latest
         imagePullPolicy: ifNotPresent
         ports:
         - containerPort: 8000

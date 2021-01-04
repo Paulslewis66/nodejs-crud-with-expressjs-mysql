@@ -13,7 +13,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("paulslewis66/nodejs-crud-with-expressjs-mysql")
+                    myapp = docker.build("paulslewis66/nodejs")
                 }
             }
         }
