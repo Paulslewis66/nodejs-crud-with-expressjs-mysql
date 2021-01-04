@@ -5,6 +5,8 @@ FROM node:current-buster-slim
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+RUN npm cache clean --force
+
 RUN npm install express
 RUN npm install cookie-parser
 RUN npm install debug
