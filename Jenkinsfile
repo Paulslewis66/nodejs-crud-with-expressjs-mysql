@@ -18,6 +18,15 @@ pipeline {
             }
         }
 
+      stage('Publish image to Docker Hub') {
+          
+            steps {
+        withDockerRegistry([ credentialsId: "docker", url: "" ]) {
+          sh  'docker push paulslewis66/nodejs'
+            }     
+          }
+        }  
+
 stage('Deploy sql') {
       steps {
         script {
