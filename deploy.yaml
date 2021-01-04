@@ -18,10 +18,10 @@ spec:
       containers:
       - name: hello-whale-container
         image: paulslewis66/nodejs-app:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service 
