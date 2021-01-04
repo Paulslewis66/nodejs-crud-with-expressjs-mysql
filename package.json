@@ -20,6 +20,9 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "pug": "~2.0.0-beta10",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "passport": ">= 0.0.0",
+    "passport-http": ">= 0.0.0",
+    "passport-anonymous": ">= 0.0.0"
   }
 }
