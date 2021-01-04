@@ -13,7 +13,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("paulslewis66/nodejs")
+                    myapp = docker.build("paulslewis66/nodejs-app")
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
           
             steps {
         withDockerRegistry([ credentialsId: "docker", url: "" ]) {
-          sh  'docker push paulslewis66/nodejs'
+          sh  'docker push paulslewis66/nodejs-app'
             }     
           }
         }  

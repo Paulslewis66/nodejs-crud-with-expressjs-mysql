@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: paulslewis66/nodejs:latest
+        image: paulslewis66/nodejs-app:latest
         imagePullPolicy: ifNotPresent
         ports:
         - containerPort: 8000
