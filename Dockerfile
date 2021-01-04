@@ -1,5 +1,5 @@
 # use a node base image
-FROM public.ecr.aws/bitnami/node:14.15.3-prod-debian-10-r15
+FROM node:current-buster-slim
 
 # Create app directory
 RUN mkdir -p /usr/src/app
