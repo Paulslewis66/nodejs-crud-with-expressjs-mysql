@@ -41,4 +41,4 @@ spec:
       volumes:
       - name: mariadb-persistent-storage
         persistentVolumeClaim:
-          claimName: mariadb-pv-claimName
+          claimName: mariadb-pv-claim
